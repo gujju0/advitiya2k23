@@ -768,6 +768,13 @@ nav .right .right_menu li a:hover
 
 /*********************************************** Footer ************************************************/
 
+#websitelogo
+{
+  width: 25px;
+}
+
+
+
 .footer {
   width: 90%;
   margin: 0 auto;
