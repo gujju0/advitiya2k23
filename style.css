@@ -537,15 +537,17 @@ header {
 
 .card_one a img {
   width: 100%;
-  object-fit: contain;
-  transform: scale(0.9);
+  object-fit: cover;
+  /* transform: scale(0.9); */
+  border-radius: 10px;
   height: -webkit-fill-available;
 }
 
 .card_two a img {
   width: 100%;
-  object-fit: contain;
-  transform: scale(0.9);
+  object-fit: cover;
+  /* transform: scale(0.9); */
+  border-radius: 10px;
   height: -webkit-fill-available;
 }
 
@@ -1024,44 +1026,62 @@ header {
 }
 
 .div1 {
-  background-image: url(images/blog-1.jpg);
+  background-image: url(images/one.jpg);
   background-size: cover;
   grid-area: 1 / 3 / 2 / 5;
 }
 .div2 {
-  background-image: url(images/blog-2.jpg);
+  background-image: url(images/two.jpg);
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   grid-area: 1 / 1 / 2 / 2;
 }
 .div3 {
-  background-image: url(images/blog-3.jpeg);
+  background-image: url(images/ten.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
   grid-area: 1 / 2 / 2 / 3;
 }
 .div4 {
-  background-image: url(images/blog-4.jpg);
+  background-image: url(images/four.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   grid-area: 2 / 1 / 4 / 3;
 }
 .div5 {
-  background-image: url(images/blog-5.jpg);
+  background-image: url(images/five.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   grid-area: 2 / 3 / 3 / 4;
 }
 .div6 {
-  background-image: url(images/blog-7.jpeg);
+  background-image: url(images/six.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   grid-area: 2 / 4 / 3 / 5;
   background-color: red;
 }
 .div7 {
-  background-image: url(images/blog-6.jpeg);
+  background-image: url(images/seven.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   grid-area: 3 / 3 / 5 / 5;
   background-color: red;
 }
 .div8 {
-  background-image: url(images/blog-9.jpg);
+  background-image: url(images/eight.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   grid-area: 4 / 1 / 5 / 2;
   background-color: red;
 }
 .div9 {
-  background-image: url(images/blog-8.webp);
+  background-image: url(images/nine.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   grid-area: 4 / 2 / 5 / 3;
   background-color: red;
 }
