@@ -4,44 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/flipdown.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/flipdown.js"></script>
     <title>Document</title>
 </head>
 <body>
 
     <div class="container">
         
-        <nav>
-            <div class="left hide">
-                <ul class="left_menu">
-                    <li class="left_list"><a href="index.html">Home</a></li>
-                    <li class="left_list"><a href="https://youtu.be/XFDPYgwrcMM">Invitaion Video</a></li>
-                    <li class="left_list"><a href="#goToSponsor">Our Sponsors</a></li>
-                </ul>
-            </div>
-            <div class="mainLogo">
-                <img src="images/Logo.svg" alt="">
-            </div>
-            <div class="right hide">
-                <ul class="right_menu">
-                    <li class="right_list"><a href="#goToEvents">Events</a></li>
-                    <li class="right_list"><a href="#goToRegistration">Register</a></li>
-                    <li class="right_list"><a href="#goToContactUs">Contact Us</a></li>
-                </ul>
-            </div>
 
-            <div class="hamburger" onclick="openMenu()"><img src="images/menu.svg" alt=""></div>
+<!--------------------------------------------------------------------------------------------------------------->
 
-        </nav>
-        <div class="hamburger_menu">
-            <ul class="menu_bar">
-                <li class="menu_list"><a href="index.html">Home</a></li>
-                <li class="menu_list"><a href="https://youtu.be/XFDPYgwrcMM">Invitaion Video</a></li>
-                <li class="menu_list"><a href="#goToSponsor">Our Sponsors</a></li>
-                <li class="menu_list"><a href="#goToEvents">Events</a></li>
-                <li class="menu_list"><a href="#goToRegistration">Register</a></li>
-                <li class="menu_list"><a href="#goToContactUs">Contact Us</a></li>
-            </ul>
+<header>
+    <div class="navbar">
+
+        
+        <ul class="links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+        </ul>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/Logo.svg" alt="logo">
+            </a>
         </div>
+        
+        <ul class="links">
+            <li><a href="photos.html">Photos</a></li>
+            <li><a href="#goToContactUs">About Us</a></li>
+            <a href="#goToRegistration" class="action_btn">Register</a>
+        </ul>
+
+
+        <div class="toggle_btn">
+            <i class="hamburger">
+                <img src="/images/Vector.svg" alt="">
+            </i>
+        </div>
+    </div>
+
+    <div class="dropdown_menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="photos.html">Photos</a></li>
+        <li><a href="#goToContactUs">About Us</a></li>
+        <li><a href="#goToRegistration" class="action_btn">Register</a></li>
+    </div>
+</header>
+
+<!--------------------------------------------------------------------------------------------------------------->
 
         <div class="content">
 
@@ -67,7 +81,24 @@
         </div>
 
     </div>
+<div class="timer_container">
+    
+    <div class="timer">
+        <h1>Event Timer</h1>
+        <div id="flipdown" class="flipdown"></div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let timer_ = 1698204600//unix timestamp
+            let flipdown = new FlipDown(timer_)
+                .start()
+                .ifEnded(() => {
+                    document.querySelector(".flipdown").innerHTML = `<h2>Timer is ended</h2>`;
+                })
+        })
+    </script>
 
+</div>
     <section id="goToEvents">
         <div class="All-events all-center">
             <div class="event-title">
@@ -243,6 +274,7 @@
             <div class="upper-part">
                 <div class="footer-logo">
                     <img src="images/clglogo.png" alt="">
+                    <img src="images/gtu.png" alt="">
                 </div>
                 <div class="footer-list">
                     <a href="#">About us</a>
